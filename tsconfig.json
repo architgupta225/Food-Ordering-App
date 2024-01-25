@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/login/page.tsx", "src/app/api/auth/[...nextauth]/route.js", "src/libs/mongoConnect.js", "src/app/api/upload/route.js", "src/app/profile/page.jsx", "src/models/UserInfo.js", "src/app/categories/page.jsx", "src/app/menu-items/page.jsx", "src/app/menu-items/edit/[id]/page.jsx", "src/components/layout/MenuItemForm.jsx", "src/components/layout/Header.jsx", "src/components/menu/MenuItemTile.jsx", "src/components/menu/MenuItem.jsx", "src/app/cart/page.jsx", "src/app/orders/[id]/page.jsx"],
+  "exclude": ["node_modules"]
+}
