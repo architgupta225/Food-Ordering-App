@@ -1,9 +1,4 @@
-type headerProp = {
-    subHeader : string
-    mainHeader : string
-}
-
-export default function SectionHeader({subHeader, mainHeader} : headerProp){
+export default function SectionHeader({subHeader, mainHeader}){
     return (
     <div className="text-center mb-4">
         <h3 className="uppercase text-gray-500 font-semibold leading-4">{subHeader}</h3>

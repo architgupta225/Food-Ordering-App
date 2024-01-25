@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function UserTabs({ isAdmin }: any) {
+export default function UserTabs({ isAdmin }) {
     const path = usePathname();
     return (
         <div className="flex  mx-auto justify-center flex-wrap gap-2 tabs">
