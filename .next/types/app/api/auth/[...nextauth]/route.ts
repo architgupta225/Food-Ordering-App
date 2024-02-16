@@ -1,4 +1,4 @@
-// File: /home/nineleaps/Desktop/Food-Ordering-App/src/app/api/auth/[...nextauth]/route.js
+// File: C:\Users\archi\Desktop\Food-Ordering-App\src\app\api\auth\[...nextauth]\route.js
 import * as entry from '../../../../../../src/app/api/auth/[...nextauth]/route.js'
 import type { NextRequest } from 'next/server.js'
 

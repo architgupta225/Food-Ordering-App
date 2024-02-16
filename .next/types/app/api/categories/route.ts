@@ -1,4 +1,4 @@
-// File: /home/nineleaps/Desktop/Food-Ordering-App/src/app/api/categories/route.ts
+// File: C:\Users\archi\Desktop\Food-Ordering-App\src\app\api\categories\route.ts
 import * as entry from '../../../../../src/app/api/categories/route.js'
 import type { NextRequest } from 'next/server.js'
 
