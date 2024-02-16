@@ -10,10 +10,13 @@ import toast from "react-hot-toast";
 
 export default function ProfilePage() {
     const session = useSession()
+    console.log("🚀 ~ ProfilePage ~ session:", session)
 
     const [user, setUser] = useState(null)
     const [isAdmin, setIsAdmin] = useState(false)
     const [profileFetched, setProfileFetched] = useState(false)
+    const [isLoading, setIsLoading] = useState(false)
+    const [isRedirect, setIsRedirect] = useState(false)
 
     useEffect(() => {
         if (session.status === 'authenticated') {
@@ -22,8 +25,17 @@ export default function ProfilePage() {
                     setUser(data)
                     setIsAdmin(data.admin)
                     setProfileFetched(true)
+                    setIsLoading(false)
                 })
             });
+        }
+        if (session.status === 'loading') {
+            setIsLoading(true)
+        }
+
+        if (session.status === 'unauthenticated') {
+            console.log("hello")
+            setIsRedirect(true)
         }
     }, [session.status])
 
@@ -48,12 +60,12 @@ export default function ProfilePage() {
         })
     }
 
-    if (session.status === 'loading' || !profileFetched) {
-        return 'Loading...'
+    if (isRedirect) {
+        return redirect('/login');
     }
 
-    if (session.status === 'unauthenticated') {
-        return redirect('/login');
+    if (isLoading || !profileFetched) {
+        return <>Loading...</>
     }
 
     return (
