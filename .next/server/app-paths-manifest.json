@@ -1,8 +1,4 @@
 {
-  "/page": "app/page.js",
   "/login/page": "app/login/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/menu/page": "app/menu/page.js",
-  "/api/categories/route": "app/api/categories/route.js",
-  "/api/menu-items/route": "app/api/menu-items/route.js"
+  "/menu/page": "app/menu/page.js"
 }
