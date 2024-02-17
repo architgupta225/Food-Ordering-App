@@ -1,12 +1,4 @@
 {
   "/page": "app/page.js",
-  "/profile/page": "app/profile/page.js",
-  "/categories/page": "app/categories/page.js",
-  "/users/page": "app/users/page.js",
-  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
-  "/menu-items/page": "app/menu-items/page.js",
-  "/api/profile/route": "app/api/profile/route.js",
-  "/api/categories/route": "app/api/categories/route.js",
-  "/api/menu-items/route": "app/api/menu-items/route.js",
   "/menu/page": "app/menu/page.js"
 }
