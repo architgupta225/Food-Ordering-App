@@ -1,3 +1,7 @@
+import { UserInfo } from "@/models/UserInfo";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./[...nextauth]/route";
+
 async function isAdmin() {
     const session = await getServerSession(authOptions);
     const userEmail = session?.user?.email;
