@@ -1,12 +1,12 @@
 import clientPromise from "@/libs/mongoConnect";
-import {UserInfo} from "@/models/UserInfo";
+import { UserInfo } from "@/models/UserInfo";
 import bcrypt from "bcrypt";
 import * as mongoose from "mongoose";
-import {User} from '@/models/User';
-import NextAuth, {getServerSession} from "next-auth";
+import { User } from '@/models/User';
+import NextAuth, { getServerSession } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
-import { MongoDBAdapter } from "@auth/mongodb-adapter"
+import { MongoDBAdapter } from "@auth/mongodb-adapter";
 
 export const authOptions = {
   secret: process.env.SECRET,
@@ -35,7 +35,7 @@ export const authOptions = {
           return user;
         }
 
-        return null
+        return null;
       }
     })
   ],
@@ -45,6 +45,11 @@ export const authOptions = {
   }
 };
 
+export async function isAdmin(userEmail) {
+  const userInfo = await UserInfo.findOne({ email: userEmail });
+  return userInfo && userInfo.admin;
+}
+
 const handler = NextAuth(authOptions);
 
-export { handler as GET, handler as POST }
+export default handler;
